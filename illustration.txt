@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# M in CIGAR
+
+# ubam (MergeBamAlignment)
+# combines info + extra cleanup
+
+# Mark duplicates (identify based on the first base including the soft clipped part)
+# libaray duplicates & optical duplicates
+
+# loacal realignment (deprecated)
+# not necessary when using assembly-based variant caller
+
+# BQSR
+
+# HaplotypeCaller in gGVCF mode (bonus: physical phasing & functional implications of variant phasing)
+# 1.Idenfity ActiveRegions
+# 2.Assembly plausible haplotypes
+# 3.Determine per-read likehoods (PairHMM)
+# 4.Genotype sample
+
+# run GenotypeGVFs to re-genotype samples with multi-sample model
+# (recalculate QUAL score)
+# non-variant block record
+# variant site record
+# non-variant block record
+# ...
+# (GenomicsDBImport)
+# increased sensitivity (saturation ~600 samples) (no loss of accuracy on sinlgetons)
+
+# VQSR
+# Gaussian Mixture Models
+# Convolutional Neural Networks
+
+# genotype refinement improves GT quality and de novo calls
+
+# evaluate callset for downstream analyses
+# number of Indel & SNPs
+# Indel Ratio
+# TiTv Ratio
+# Genotype concordance (use truth sets generated with orthogonal methods)
+# (VariantEval or GenotypeConcordance)
+
+# Workflow Description Language (WDL)
+# Execution Engine (Cromwell)
+# Terra
+
+# Hail
